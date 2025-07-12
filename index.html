@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Princess Alyzza Villarosa | Virtual Assistant Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #f8cdd5;
+            --accent-color: #f093aa;
+            --text-color: #333;
+            --background-color: #fff;
+            --border-color: #ddd;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 1.6;
+        }
+ nav {
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+    border-left: 0;
+    border-right: 0;
+    padding: 12px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Responsive navbar text and padding for smaller screens */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 13px;
+        margin: 0 5px;
+        padding: 6px 10px;
+    }
+}
+
+
+
+
+        .container {
+            padding: 90px 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            color: var(--accent-color);
+        }
+        a {
+            color: var(--accent-color);
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.cert-card {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+.cert-card:hover {
+    box-shadow: 0 0 12px #f9d2db;
+}
+.cert-card img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+        .resume-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .resume-btn:hover {
+            background-color: #e87999;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <img src="profile.jpg" alt="Princess Alyzza Villarosa" class="profile-pic">
+
+        <h1>Princess Alyzza Villarosa</h1>
+        <p>20 years old | Bachelor of Technology and Livelihood Education Student at State University of Northern Negros (SUNN) | Certified Virtual Assistant</p>
+
+        <div id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <strong>Princess Alyzza Villarosa</strong>, a passionate and reliable Virtual Assistant.
+                Currently pursuing Bachelor of Technology and Livelihood Education at the State University of Northern Negros, I've completed professional training and earned certifications in Canva, Data Entry, Lead Generation, Facebook Advertising, Social Media Management, and Graphic Design.
+                I’m organized, proactive, and eager to assist businesses and clients in managing daily tasks efficiently.
+            </p>
+        </div>
+
+        <div id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Email & Calendar Management</li>
+                <li>Data Entry & Web Research</li>
+                <li>Canva Graphic Design</li>
+                <li>Lead Generation</li>
+                <li>Facebook Ads Setup</li>
+                <li>Social Media Content Management</li>
+                <li>Basic Graphic and Video Editing</li>
+            </ul>
+        </div>
+
+        <div id="resume">
+    <h2>Resume</h2>
+    <p>Click to view an enlarged version or download below:</p>
+
+    <div class="cert-card" onclick="openModal('Villarosa Resume.jpg')">
+        <img src="Villarosa Resume.jpg" alt="Princess Alyzza Villarosa Resume">
+        <p style="margin-top:10px; font-weight:bold;">Princess Alyzza Villarosa Resume</p>
+    </div>
+
+   <a href="Villarosa, Princess Resume.pdf" download class="resume-btn" style="display:inline-block; margin-top: 15px;">Download Resume</a>
+
+</div>
+
+
+        <div id="certificates">
+            <h2>Certificates</h2>
+            <div class="certificates">
+                <div class="cert-card" onclick="openModal('canva.png')">
+                    <img src="canva.png" alt="Canva Expert Certificate">
+                    <p>Canva Expert</p>
+                </div>
+                <div class="cert-card" onclick="openModal('dataentry.png')">
+                    <img src="dataentry.png" alt="Data Entry Certificate">
+                    <p>Data Entry</p>
+                </div>
+                <div class="cert-card" onclick="openModal('leadgeneration.png')">
+                    <img src="leadgeneration.png" alt="Lead Generation Certificate">
+                    <p>Lead Generation</p>
+                </div>
+                <div class="cert-card" onclick="openModal('facebookAd.png')">
+                    <img src="facebookAd.png" alt="Facebook Advertising Certificate">
+                    <p>Facebook Advertising</p>
+                </div>
+                <div class="cert-card" onclick="openModal('SocMedManagement.png')">
+                    <img src="SocMedManagement.png" alt="Social Media Management Certificate">
+                    <p>Social Media Management</p>
+                </div>
+                <div class="cert-card" onclick="openModal('GrphicDesign.png')">
+                    <img src="GrphicDesign.png" alt="Graphic Design Certificate">
+                    <p>Graphic Design</p>
+                </div>
+            </div>
+        </div>
+
+  <div id="contact">
+    <h2>Contact Me</h2>
+    <p>
+        <i class="bi bi-envelope-fill" style="color:var(--accent-color);"></i>
+        <a href="princessvillarosa914@gmail.com">princessvillarosa914@gmail.com</a>
+    </p>
+    <p>
+        <i class="bi bi-facebook" style="color:var(--accent-color);"></i>
+        <a href="https://www.facebook.com/princessalyzzavillarosa10" target="_blank">Princess Alyzza Elizabeth Kyle</a>
+    </p>
+    <p>
+        <i class="bi bi-telephone-fill" style="color:var(--accent-color);"></i>
+        <a href="tel:+63 9708221552">+63 9708221552</a>
+    </p>
+</div>
+
+
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImg").src = imgSrc;
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        
+    </script>
+
+</body>
+</html>
