@@ -1,2 +1,2 @@
-# Villarosa-JobPortfolio
+# Villarosa-portfolio
 Princess Alyzza Villarosa Job Portfolio
